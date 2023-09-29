@@ -23,7 +23,7 @@ DIO_VoidSetPortDirection(DIO_u8PORTD,0b00001111);
 DIO_VoidSetPortValue(DIO_u8PORTD,0b11111111);
 DIO_VoidSetPortDirection(DIO_u8PORTB,0b11111111);
 DIO_VoidSetPortDirection(DIO_u8PORTA,0b11111111);
-DIO_VoidSetPortDirection(DIO_u8PORTC,DIO_u8HIGH);
+
 CLCD_voidInit();
 f32 sum=0,sum_tmp=0;
 s32 int_sum=0,dec_sum=0,int_sum_tmp=0,dec_sum_tmp=0;
@@ -92,7 +92,7 @@ u8 float_state=0;
         	operand=operand+(floatarr[counter]*CLCD_s32AdderNegativePower(counter+1));
         	counter++;
         	float_count--;
-        	DIO_VoidSetPortValue(DIO_u8PORTC,DIO_u8HIGH);
+
         }
 
     //operating the operand
