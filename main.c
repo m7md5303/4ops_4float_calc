@@ -99,9 +99,11 @@ u8 float_state=0;
         	float_count--;
 
         }
-    if((operand==0)&&(operation==12)){
+    if((operand==0)&&(operation==12)||((sum==0)&&(operand==12))){
+    	CLCD_voidClearDisplay();
     	CLCD_voidSendString("MATH ERROR");
     	err_flag=1;
+    	_delay_ms(500);
     }
 
 if(neg_flag){
@@ -214,7 +216,8 @@ if(neg_flag){
     digit_count=0;
     float_count=0;
     float_state=0;
-    neg_flag=0;}
+    neg_flag=0;
+    err_flag=0;}
 
 
 

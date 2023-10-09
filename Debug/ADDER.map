@@ -159,7 +159,7 @@ LOAD d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x2644
+.text           0x00000000     0x2820
  *(.vectors)
  .vectors       0x00000000       0x54 d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -320,25 +320,25 @@ LOAD d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.
  .text.KPD_u8GetPressedKey
                 0x00001940      0x1d8 ./KPD_program.o
                 0x00001940                KPD_u8GetPressedKey
- .text.main     0x00001b18      0xa02 ./main.o
+ .text.main     0x00001b18      0xbde ./main.o
                 0x00001b18                main
- .text.libgcc   0x0000251a       0x3e d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
-                0x0000251a                __mulsi3
- .text.libgcc   0x00002558       0x36 d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
-                0x00002558                __divmodsi4
- .text.libgcc   0x0000258e        0x0 d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x0000258e        0x0 d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x0000258e       0x44 d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
-                0x0000258e                __udivmodsi4
- .text.libgcc   0x000025d2       0x38 d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x000025d2                __prologue_saves__
- .text.libgcc   0x0000260a       0x36 d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x0000260a                __epilogue_restores__
-                0x00002640                . = ALIGN (0x2)
+ .text.libgcc   0x000026f6       0x3e d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                0x000026f6                __mulsi3
+ .text.libgcc   0x00002734       0x36 d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
+                0x00002734                __divmodsi4
+ .text.libgcc   0x0000276a        0x0 d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x0000276a        0x0 d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000276a       0x44 d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x0000276a                __udivmodsi4
+ .text.libgcc   0x000027ae       0x38 d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x000027ae                __prologue_saves__
+ .text.libgcc   0x000027e6       0x36 d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x000027e6                __epilogue_restores__
+                0x0000281c                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00002640        0x0 d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00002640                exit
-                0x00002640                _exit
+ .fini9         0x0000281c        0x0 d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x0000281c                exit
+                0x0000281c                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -357,11 +357,11 @@ LOAD d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00002640        0x4 d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000281c        0x4 d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00002644                _etext = .
+                0x00002820                _etext = .
 
-.data           0x00800060      0x14e load address 0x00002644
+.data           0x00800060      0x14e load address 0x00002820
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -440,8 +440,8 @@ LOAD d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.
  *(.bss*)
  *(COMMON)
                 0x008001ae                PROVIDE (__bss_end, .)
-                0x00002644                __data_load_start = LOADADDR (.data)
-                0x00002792                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00002820                __data_load_start = LOADADDR (.data)
+                0x0000296e                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x008001ae        0x0
                 0x008001ae                PROVIDE (__noinit_start, .)
@@ -466,15 +466,15 @@ LOAD d:/embedded systems/imt diploma/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x189c
+.stab           0x00000000     0x1968
  *(.stab)
  .stab          0x00000000      0x870 ./CLCD_program.o
  .stab          0x00000870      0x42c ./DIO_program.o
                                 0x4b0 (size before relaxing)
  .stab          0x00000c9c      0x2e8 ./KPD_program.o
                                 0x4f8 (size before relaxing)
- .stab          0x00000f84      0x918 ./main.o
-                                0xb28 (size before relaxing)
+ .stab          0x00000f84      0x9e4 ./main.o
+                                0xbf4 (size before relaxing)
 
 .stabstr        0x00000000      0xc30
  *(.stabstr)
