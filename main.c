@@ -25,6 +25,7 @@ DIO_VoidSetPortDirection(DIO_u8PORTB,0b11111111);
 DIO_VoidSetPortDirection(DIO_u8PORTA,0b11111111);
 
 CLCD_voidInit();
+u8 neg_flag=0,err_flag=0;
 f32 sum=0,sum_tmp=0;
 s32 int_sum=0,dec_sum=0,int_sum_tmp=0,dec_sum_tmp=0;
 u8 i,digit_count,float_count,operation=0;
@@ -63,6 +64,10 @@ u8 float_state=0;
     CLCD_voidClearDisplay();
     while(press!=11){//getting the operand from the user
     press=KPD_u8GetPressedKey();
+    if(press==14&&(!(neg_flag))){
+    	CLCD_voidSendData('-');
+    	neg_flag=1;
+    }
     if(press==10){//getting the float part
     	CLCD_voidSendData('.');
     	float_state++;
@@ -94,7 +99,14 @@ u8 float_state=0;
         	float_count--;
 
         }
+    if((operand==0)&&(operation==12)){
+    	CLCD_voidSendString("MATH ERROR");
+    	err_flag=1;
+    }
 
+if(neg_flag){
+	operand=operand*-1;
+} if(!(err_flag)){
     //operating the operand
     switch (operation) {
 		case 15:
@@ -110,7 +122,7 @@ u8 float_state=0;
 		sum_tmp/=operand;
 		    break;
 	}
-
+}
     //giving the proper sign for the printed value
     if(sum_tmp>=0){
     	sum=sum_tmp;
@@ -201,7 +213,8 @@ u8 float_state=0;
     operation=0;
     digit_count=0;
     float_count=0;
-    float_state=0;}
+    float_state=0;
+    neg_flag=0;}
 
 
 
